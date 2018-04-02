@@ -1,0 +1,18 @@
+
+service: my-first-serverless-framework-app 
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: eu-west-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline

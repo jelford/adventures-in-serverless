@@ -1,3 +1,8 @@
+# AWS lambda + API Gateway
+
+Tried this out first - I was going to try Google Functions first, but support was limited to Node, and
+I wanted to use (modern) python. Even AppEngine is still on Python 2.7, so Google felt like a bit of
+a non-starter. Hopefully I'll come back to it later.
 
 ## structure:
 
@@ -17,6 +22,7 @@
 * added an S3 bucket for code to be uploaded and stored (hence permission)
 * added an execution role (now deleted) for the lambda to run as (`hello-world.yaml/Resources.helloworld.Properties.Role`)
   * granted the role AWSLambdaBasicExecution, AWSLambdaS3Execution, AWSLambdaMicroserviceExecution
+* make local dir mountable by docker (thanks to docker/selinux integration): `chcon -Rt svirt_sandbox_file_t .`
 
 ## usage
 
