@@ -18,6 +18,7 @@
 * came with a bunch of ideas about how my infrastructure should be laid out (e.g. wanted to create IAM roles straight off, without asking)
 * when it failed to tear up, fully deleted the failed cloud-formation (real rollback without me needing to jump into the console and fix it manually)
 * a fully-featured walkthrough tutorial linked from [the docs](https://serverless.com/blog/serverless-express-rest-api/) - rather than un-joined-up reference docs
+* Got logs coming through in CloudWatch without doing anything
 
 ## commonalities
 
@@ -34,4 +35,3 @@
 * Python is less of a 1st-class citizen here
   * e.g. packaging python apps takes the form of [a blog post](https://serverless.com/blog/serverless-python-packaging/)
   * uses a neat workflow for packaging python deps through Docker rather than asking you to build everything on an EC2 host
-* still don't know where my logs are
